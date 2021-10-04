@@ -4,6 +4,7 @@ Monetizelead is an open-source software to sell leads via text messages on the f
 The GNU GPLv3 license; we hope you will contribute to this project and build things that will disrupt the lead generation world. Monetizelead got built on CodeIgnitor & PHP 7; it uses REST API.
 
 Learn more at http://monetizelead.com, or we have hosted and managed subscription plans on https://www.monetizelead.com/pricing.php
+
 Signup at http://twilio.com and http://stripe.com and get your API keys.
 
 Installation:
