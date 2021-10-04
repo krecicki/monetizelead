@@ -1,0 +1,349 @@
+@import url('reset.css');
+@import url('utilities.css');
+
+
+/*==============================*/
+/*
+  Name: DEFAULT VERSION
+  Author: Bronislav Churý
+  Author URL: http://www.bronislavchury.cz
+  Note: All content are copyrighted by author. Please, don't steal anything.
+*/
+
+/*========= CONTENT ==========*/
+/*
+  1} Body 
+  2} Main Structure
+  3} Content
+  4} Footer
+*/
+/*==============================*/
+
+/*=============================*/
+/*========= 1} BODY ===========*/
+/*=============================*/
+
+html {
+	background: #FFF url('') no-repeat top center; 
+	height: 580px;
+	-webkit-background-size: cover 580px;
+	-moz-background-size: cover 580px;
+	background-size: cover 580px !important;
+}
+
+BODY {font-family: 'Arial'; width: 100%; font-size: 12px;}
+
+/*=============================*/
+/*====== 2} SCRURCTURE ========*/
+/*=============================*/
+
+#wrap, #header, #content, #footer {display: block;}
+#wrap {width: 960px; position: relative;}
+
+#header {height: 580px; background: url('') -250px 50px no-repeat; opacity: 0;}
+
+#header #get-app h1, #header #get-app h2, #header #get-app span {color: #000;text-shadow: 0 1px 2px rgba(0,0,0,.4);}
+
+#header #get-app h1 {font-size: 50px; opacity: 0;}
+#header #get-app h2 {font-size: 40px; opacity: 0;}
+
+#header #get-app {width: 400px; height: 285px; display: block; position: absolute; right: 196px; top: 140px;}
+#header #get-app #getAppBtn {opacity: 0;}
+#header #get-app #getAppBtn a div {display: block; background: url('../img/icons/getAppIcons.png') 18px center no-repeat;}
+#header #get-app span {font-weight: bold; font-size: 11px; float: left; clear: both; display: block; margin-top: 10px; opacity: 0;}
+
+
+
+/*=============================*/
+/*========= 3} CONTENT ========*/
+/*=============================*/
+
+#columns {width: 960px; clear: both; margin-top: 90px;}
+#columns li {width: 290px; float: left; display: inline-block; background-position: center top; background-repeat: no-repeat; text-align: center; margin-right: 40px; opacity: 0;}
+#columns li:nth-child(3) {margin-right: 0;}
+#columns li h3 {font-size: 22px; color #33343d; display: block; clear: both; margin-top: 50px;}
+#columns li P {color: #78797d; font-size: 15px; margin-top: 10px;}
+
+#columns li.heart {background-image: url('../img/icons/heart.gif');}
+#columns li.phone {background-image: url('../img/icons/phone.gif');}
+#columns li.wheel {background-image: url('../img/icons/wheel.gif');}
+
+
+.detail {margin: 75px 0 0 0; display: block; clear: both; float: left; width: 100%; opacity: 0;}
+.detail h2 {width: 100%; font-size: 36px; color: #33343d; text-align: center; margin: 100px 0 10px 0;}
+.detail P {width: 100%; font-size: 15px; color: #78797d; text-align: center;}
+
+
+#social {float: left; width: 100%; margin: 40px 0 140px 0;}
+#social li {float: left; display: inline-block; width: 210px; height: 39px;}
+#social li a {color: #FFF; font-weight: bold; text-shadow: 0 -1px 1px rgba(0,0,0,.35); font-size: 13px; text-align: right !important; padding-right: 20px; display: block; line-height: 3;}
+#social li .twitter a {background: url('../img/icons/twitter.png') 20px center no-repeat;}
+#social li .fb a {background: url('../img/icons/fb.png') 20px center no-repeat;}
+
+
+/*=============================*/
+/*======== 4} FOOTER ==========*/
+/*=============================*/
+
+#footer {width: 100%; height: 92px;  background: url('../img/layout/footer.gif') repeat-x; clear: both;}
+
+#footer #copyright {width: 100%; font-size: 13px; clear: both; float: left; margin: 26px 0 0 0; text-align: center; color: #78797d; line-height: 1.5;  display: block;}
+#footer #copyright .heart {color: #f5006e;}
+#footer #copyright a {color: #f5006e;}
+#footer #copyright a:hover {text-decoration: underline;}
+
+
+
+
+/*=============================*/
+/*======== 5} PLUGINS =========*/
+/*=============================*/
+
+// ---------------- HEADER BUTTON AND TEXT IN BUTTON----------------//
+
+#getAppBtn {display: block; float: left; clear: both;}
+
+.border-around-button {
+  float: left;
+  margin: 10px 0 0 0;
+  padding: 8px;
+	-moz-border-radius: 5px; /* from vector shape */
+	-webkit-border-radius: 5px; /* from vector shape */
+	border-radius: 5px; /* from vector shape */
+	background-color: rgba(0,0,0,.22); /* solid fill */
+	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,.15); /* inner shadow */
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,.15); /* inner shadow */
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,.15); /* inner shadow */
+  behavior: url(pie.htc);
+}
+
+
+.button-blue-link {
+  float: left; 
+  clear: both;
+	display: block;
+  width: 195px;
+	height: 50px;
+	color: #FFF;
+	text-shadow: 0 -1px 1px rgba(0,0,0,.35);
+	font-weight: bold;
+	text-align: center;
+	line-height: 3;
+	font-size: 18px;
+		width: 224px;
+	height: 50px;
+	-moz-border-radius: 3px; /* from vector shape */
+	-webkit-border-radius: 3px; /* from vector shape */
+	border-radius: 3px; /* from vector shape */
+    background: linear-gradient(#00a9f9,#0054bc);
+    background: -webkit-linear-gradient(#00a9f9,#0054bc);
+    background: -moz-linear-gradient(#00a9f9,#0054bc);
+    background: -o-linear-gradient(#00a9f9,#0054bc);
+    background: -ms-linear-gradient(#00a9f9,#0054bc);
+    -pie-background: linear-gradient(#00a9f9,#0054bc);
+    box-shadow:
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #12dbff inset;
+    -webkit-box-shadow: 
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #12dbff inset;
+    -moz-box-shadow: 
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #12dbff inset;
+    -ms-box-shadow: 
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #12dbff inset;
+    -o-box-shadow:
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #12dbff inset;
+    behavior: url(pie.htc);
+}
+
+
+.button-blue-link:hover {
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box; /* prevents bg color from leaking outside the border */
+	width: 224px;
+	height: 50px;
+	-moz-border-radius: 3px; /* from vector shape */
+	-webkit-border-radius: 3px; /* from vector shape */
+	border-radius: 3px; /* from vector shape */
+    background: linear-gradient(#0093df,#0051ac);
+    background: -webkit-linear-gradient(#0093df,#0051ac);
+    background: -moz-linear-gradient(#0093df,#0051ac);
+    background: -o-linear-gradient(#0093df,#0051ac);
+    background: -ms-linear-gradient(#0093df,#0051ac);
+    -pie-background: linear-gradient(#0093df,#0051ac);
+    box-shadow: 
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #46bcff inset;
+    -webkit-box-shadow:
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #46bcff inset;
+    -moz-box-shadow: 
+	0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #46bcff inset;
+    -ms-box-shadow:
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #46bcff inset;
+    -o-box-shadow:
+    0 2px 0 rgba(2,2,2,.1) /* drop shadow */,
+    0 1px 0 #46bcff inset;
+    behavior: url(pie.htc);
+}
+
+
+//------------END--------------//
+
+
+
+//-----------------FACEBOOK A TWITTER BUTTON + TEXT----------------//
+
+
+
+
+#socialWrap {float: left; clear: both; width: 550px;}
+#social {text-align: center; width: 500px !important; margin-left: 260px !important; float: left !important;}
+#social li {padding-right: 18px;}
+
+
+#social li .twitter {
+	width: 210px;
+	height: 39px;
+	-moz-border-radius: 3px; /* from vector shape */
+	-webkit-border-radius: 3px; /* from vector shape */
+	border-radius: 3px; /* from vector shape */
+    background: linear-gradient(#1e9ff0,#007ece);
+    background: -webkit-linear-gradient(#1e9ff0,#007ece);
+    background: -moz-linear-gradient(#1e9ff0,#007ece);
+    background: -o-linear-gradient(#1e9ff0,#007ece);
+    background: -ms-linear-gradient(#1e9ff0,#007ece);
+    -pie-background: linear-gradient(#1e9ff0,#007ece);
+	border: 1px solid #007fd0; /* inner stroke */
+    box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -webkit-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -moz-box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -ms-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -o-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    behavior: url(pie.htc);
+}
+
+
+#social li .twitter:hover {
+	width: 210px;
+	height: 39px;
+	-moz-border-radius: 3px; /* from vector shape */
+	-webkit-border-radius: 3px; /* from vector shape */
+	border-radius: 3px; /* from vector shape */
+    background: linear-gradient(#477eda,#1657a7);
+    background: -webkit-linear-gradient(#477eda,#1657a7);
+    background: -moz-linear-gradient(#477eda,#1657a7);
+    background: -o-linear-gradient(#477eda,#1657a7);
+    background: -ms-linear-gradient(#477eda,#1657a7);
+    -pie-background: linear-gradient(#477eda,#1657a7);
+    border: 1px solid #3a65c5; /* inner stroke */
+    box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -webkit-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -moz-box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -ms-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -o-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    behavior: url(pie.htc);
+}
+
+
+
+
+
+
+#social li .fb {
+	width: 210px;
+	height: 39px;
+	-moz-border-radius: 3px; /* from vector shape */
+	-webkit-border-radius: 3px; /* from vector shape */
+	border-radius: 3px; /* from vector shape */
+    background: linear-gradient(#477eda,#1657a7);
+    background: -webkit-linear-gradient(#477eda,#1657a7);
+    background: -moz-linear-gradient(#477eda,#1657a7);
+    background: -o-linear-gradient(#477eda,#1657a7);
+    background: -ms-linear-gradient(#477eda,#1657a7);
+    -pie-background: linear-gradient(#477eda,#1657a7);
+    border: 1px solid #3a65c5; /* inner stroke */
+    box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -webkit-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -moz-box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -ms-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    -o-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #7bbbf8 /* inner shadow */;
+    behavior: url(pie.htc);
+	-moz-transition: background 0.3s linear; -webkit-transition: background 0.3s linear; -o-transition: background 0.3s linear; transition: background 0.3s linear;
+}
+
+
+
+
+
+#social li .fb:hover {
+	width: 210px;
+	height: 39px;
+	-moz-border-radius: 3px; /* from vector shape */
+	-webkit-border-radius: 3px; /* from vector shape */
+	border-radius: 3px; /* from vector shape */
+    background: linear-gradient(#1e9ff0,#007ece);
+    background: -webkit-linear-gradient(#1e9ff0,#007ece);
+    background: -moz-linear-gradient(#1e9ff0,#007ece);
+    background: -o-linear-gradient(#1e9ff0,#007ece);
+    background: -ms-linear-gradient(#1e9ff0,#007ece);
+    -pie-background: linear-gradient(#1e9ff0,#007ece);
+	border: 1px solid #007fd0; /* inner stroke */
+    box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -webkit-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -moz-box-shadow: 
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -ms-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    -o-box-shadow:
+	0 2px 0 rgba(0,0,0,.15) /* drop shadow */,
+	inset 0 1px 0 #54ccfe /* inner shadow */;
+    behavior: url(pie.htc);
+}
+
+
+
+
+//-----------------END------------------//

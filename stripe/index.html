@@ -1,0 +1,127 @@
+<?php require_once('../ls/application/config/database.php'); ?>
+<?php 
+// Get unique tokenid generated on original lead form submit that was inserted in the DB in the leads row
+$tokenid = $_GET['tokenid'];
+// MySQL Database Connection Variables
+$host = "localhost";
+$user = "dbname";
+$pwd = "pass";
+$db = "choicesa_4mnyexchange";
+
+mysql_connect($host, $user, $pwd, $db);
+mysql_select_db($db);
+
+
+$tokenidResults = mysql_query("SELECT * FROM questionnaire WHERE token = '".$tokenid."' order by id desc limit 1;");
+while($row = mysql_fetch_array($tokenidResults))
+{
+	$units_sold = $row['units_sold'];
+  	$timestamp = $row['timestamp'];  			
+}
+
+
+$first_date = new DateTime();
+$first_date->setTimestamp($timestamp);
+
+$current_time = time();
+
+$second_date = new DateTime();
+$second_date->setTimestamp($current_time);
+
+//$diff = $current_time - $timestamp;
+//$legible  = new date(DATE_RFC2822, $diff);
+
+$difference = $first_date->diff($second_date);
+
+function format_interval(DateInterval $interval) {
+    $result = "";
+    if ($interval->y) { $result .= $interval->format("%y years "); }
+    if ($interval->m) { $result .= $interval->format("%m months "); }
+    if ($interval->d) { $result .= $interval->format("%d days "); }
+    if ($interval->h) { $result .= $interval->format("%h hours "); }
+    if ($interval->i) { $result .= $interval->format("%i minutes "); }
+    if ($interval->s) { $result .= $interval->format("%s seconds "); }
+
+    return $result;
+}
+
+echo 'Time since last unit sold: ',  format_interval($difference);
+echo '<br/>Units Sold: ', $units_sold;
+	
+?>
+<html> 
+  <head>
+  
+          <!-- Encoding /-->
+          <meta charset="utf-8" />
+          <meta name="robots" content="noindex" />
+          
+          <!-- Title /-->
+          <title>Crispers | Nice, crispy and creeative landing page for iPhone and iPad</title>
+
+          <!-- StyleSheets /-->
+          <link rel='shortcut icon' href='./img/layout/favicon.png' type='image/x-icon' />
+          <link rel='stylesheet' href='./css/default.css' media='screen'  type='text/css' />
+          
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />       
+  </head>
+  
+  <body> 
+  
+        <!-- START: WRAP 960px /-->
+        <div id="wrap">
+          
+                   <!-- START: HEADER /-->
+                   <div id="header">
+                         <div id="get-app">
+                               <h1 class="bold">Crispers</h1>
+                               <h2>Nice, cripsy and<br />creative landing page</h2>
+
+<form action="charge.php?tokenid=<?php echo $tokenid?>" method="POST">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<?php echo $stripe['publishable_key']; ?>"
+        data-amount="1000"
+        data-name="Lead Purchase"         
+        data-locale="auto">
+    </script>
+    <script>
+        // Hide default stripe button, be careful there if you
+        // have more than 1 button of that class
+        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+    </script>
+    <div class="border-around-button"><button type="submit" class="button-blue-links">Buy my things</button></div>
+</form>
+                               
+                               <span>Available for iPhone and iPad</span>
+                         </div>
+                         <div id="ipadMini"></div>
+                   </div>
+                  
+                  
+                   <!-- START: SOCIAL /-->
+                   <div id="socialWrap">
+                   <ul id="social">          
+                        <li><div class="twitter"><a href="#" title="Follow us on Twitter">Follow us on Twitter</a></div></li>
+                        <li><div class="fb"><a href="#" title="Follow us on Facebook">Follow us on Facebook</a></div></li>
+                   </ul>
+                   </div>
+                   <!-- END: SOCIAL /-->
+          
+          </div>
+          <!-- END: WRAP /-->
+                  
+            
+  
+           <!-- START: FOOTER /-->
+           <div id="footer">
+                  <span id="copyright">&copy; 2012 All rights reserved, Made with <span class="heart">&hearts;</span> in Prague<br /><a href="mailto:support@crisper.me" title="Support email">support@crisper.me</a></span>
+           </div>
+           <!-- END: FOOTER /-->
+
+           
+           <!-- Javascript /-->
+           <script type="text/javascript" src="./js/jquery.js"></script>
+           <script type="text/javascript" src="./js/custom.js"></script>   
+        
+  </body>
+</html>

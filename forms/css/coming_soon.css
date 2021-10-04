@@ -1,0 +1,159 @@
+/*-------------------------------------------------------------------------------------
+Theme Name:	FedRex
+Theme URI: 	http://pentathemes.com/fedrex
+Version:	1.0
+Author: Pentathemes
+-------------------------------------------------------------------------------------*/
+/**
+*****************************************
+@File: FedRex Coming Soon Page Style
+*****************************************
+**/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Rubik:300,300i,400,400i,500');
+* {
+  transition: all 0.2s;
+  padding: 0;
+  margin: 0;
+}
+body{
+    padding:0px; 
+    margin:0px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 30px;
+    color: #72808e;
+    font-weight: 400;
+    font-size: 14px;
+    overflow-x:hidden; 
+    height: 100vh;
+    background: url('../images/coming-soon-bg.jpg') center center no-repeat #000;
+    background-size: cover;
+}
+.comingsoon-text{
+    text-align: center;
+    margin-top: 100px;
+}
+.comingsoon-text h1{
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 45px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.comingsoon-text img{
+    margin-bottom: 20px;
+}
+
+.comingsoon-text p{
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.countdown-section{
+    margin-top: 100px;
+}
+.countdown-section ul.countdown {
+  position: relative;
+  transform: translateY(-50%);
+  width: 50%;
+  margin: 0 auto;
+  padding: 35px 0 20px 0;
+  color: #fff;
+  overflow: hidden;
+  font-weight: bold;
+}
+.countdown-section ul.countdown li {
+  margin: 0 -3px 0 0;
+  padding: 0;
+  display: inline-block;
+  width: 25%;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.countdown-section ul.countdown li .label {
+  color: #adafb2;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.newsletter-wrapper {
+  margin: auto;
+  background: #fff;
+  margin: 0 auto;
+  width: 440px;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+.header {
+  padding: 50px 50px 100px 50px;
+  min-height: 150px;
+  background: url("../images/newsletter.png") no-repeat center 130px;
+}
+.header h1 {
+  color: #536a89;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+.header p {
+  font-size: 13px;
+  color: rgba(92,118,152,0.8);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer form {
+  flex-grow: 1;
+  display: flex;
+}
+.footer input {
+  background: #e0e5ec;
+  border: none;
+  padding: 20px 25px;
+  flex-grow: 2;
+  color: #5c7698;
+}
+.footer input::-webkit-input-placeholder {
+  color: rgba(92,118,152,0.7);
+  text-transform: uppercase;
+}
+.footer input:focus {
+  outline: none;
+}
+.footer .btn-submit {
+  background: #c6cfdc;
+  border: none;
+  padding: 20px;
+  flex-grow: 1;
+  color: #5c7698;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+.footer .btn-submit:focus {
+  outline: none;
+}
+.response{
+    font-size: 13px;
+    font-weight: 300;
+    padding: 10px 0px;
+    color: #fff;
+    text-align: center;
+}
+@media only screen and (max-width: 767px) {
+    
+    .countdown-section ul.countdown {
+        transform: translateY(0%);
+        width: 100%;
+    }
+
+}

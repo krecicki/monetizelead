@@ -1,0 +1,24 @@
+[12-Feb-2019 00:39:23 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user '{USER}'@'localhost' (using password: YES) in /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php on line 281
+[12-Feb-2019 00:39:23 UTC] PHP Fatal error:  Uncaught Exception: Connect Error 1045: Access denied for user '{USER}'@'localhost' (using password: YES) in /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php:284
+Stack trace:
+#0 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(314): MysqliDb->connect()
+#1 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(1829): MysqliDb->mysqli()
+#2 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(1441): MysqliDb->_prepareQuery()
+#3 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(614): MysqliDb->_buildQuery(1)
+#4 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(639): MysqliDb->get('app_keys', 1, '*')
+#5 /home/choicesa/public_html/monetizelead/client/demo/config.php(11): MysqliDb->getOne('app_keys')
+#6 /home/choicesa/public_html/monetizelead/client/demo/forms/index.php(1): require_once('/home/choicesa/...')
+#7 {main}
+  thrown in /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php on line 284
+[30-Apr-2019 15:43:42 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user '{USER}'@'localhost' (using password: YES) in /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php on line 281
+[30-Apr-2019 15:43:42 UTC] PHP Fatal error:  Uncaught Exception: Connect Error 1045: Access denied for user '{USER}'@'localhost' (using password: YES) in /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php:284
+Stack trace:
+#0 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(314): MysqliDb->connect()
+#1 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(1829): MysqliDb->mysqli()
+#2 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(1441): MysqliDb->_prepareQuery()
+#3 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(614): MysqliDb->_buildQuery(1)
+#4 /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php(639): MysqliDb->get('app_keys', 1, '*')
+#5 /home/choicesa/public_html/monetizelead/client/demo/config.php(11): MysqliDb->getOne('app_keys')
+#6 /home/choicesa/public_html/monetizelead/client/demo/forms/index.php(1): require_once('/home/choicesa/...')
+#7 {main}
+  thrown in /home/choicesa/public_html/monetizelead/client/demo/MySQLi-Wrapper/MysqliDb.php on line 284

@@ -1,0 +1,37 @@
+/*==============================*/
+/*
+  Name: MY UTILITIES
+  Author: Bronislav Churý
+  Author URL: http://www.bronislavchury.cz
+  Note: All content are copyrighted by author. Please, don't steal anything.
+*/
+/*=================================*/
+
+*:focus {outline: none;}
+
+.bold {font-weight: bold;}
+.italic {font-style: italic !important;}
+.underline {text-decoration: underline}
+.help {cursor: help; border-bottom: 1px dotted #ccc;}
+.justify {text-align: justify !importnt;}
+.center {text-align: center !important;}
+
+
+.hide {display: none;}
+
+.red {color: #c30000;}
+.green {color: #b1e60c;}  
+.green2 {color: #a5c463;}
+.grey {color: #666 !important;}
+.black {color: #333 !important;}
+.blue {color: #2f8fc2 !important;}
+.gold {color: #ffc57e !important;}
+.orange {color: #ffc600 !important;}
+.pointer {cursor: pointer;}
+
+
+::selection {background: #ecf1f3;}
+::-moz-selection {background: #ecf1f3;}
+
+
+

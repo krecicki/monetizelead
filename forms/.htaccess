@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTPS}::%{HTTP_HOST} ^off::(?:www\.)?(.+)$
+RewriteRule ^ https://www.%1%{REQUEST_URI} [NE,R,L]
+ 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php

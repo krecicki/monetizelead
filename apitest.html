@@ -1,0 +1,33 @@
+<html>
+	<head>	
+		<title>API Integration Sample</title>
+		<script type="text/javascript" src="https://monetizelead.com/client/demo/integration/choice.integration-min.js"></script>
+		<script>
+			function api_callback(response)
+			{
+				$('#message').html("status:" + response.status + "<br/>" + "message: " + response.message);
+				console.log(response);
+
+			}
+		</script>
+		<style type="text/css">
+			input[type='text']{
+				width:50%;
+			}
+			span{width:200px;display:inline-block;}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input data-api='apiKey' type="hidden" name="apiKey" value="ab3df-34fcf-34fab-9bc23-44af8"/>
+			<p><span>Name:</span><input type="text" data-api='name' name="name"/></p>
+			<p><span>Email:</span><input type="text" data-api='email' name="email"/></p>
+			<p><span>Phone:</span><input type="text" data-api='phone' name="phone"/></p>
+			<p><span>ZipCode:</span><input type="text" data-api='zipcode' name="zipcode"/></p>				
+			<input type="hidden" data-api="leadTypes" value="test"/>				
+			<input type="button" id="btn" data-api='lead-gen' value="Invoke API"/>
+			<br/>
+			<span id="message"></span>
+		</form>	
+	</body>
+</html>
